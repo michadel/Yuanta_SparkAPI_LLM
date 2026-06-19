@@ -36,9 +36,26 @@ Keywords: 元大證券, SparkAPI, OneAPI, 交易 API, IO 規格, LLM Knowledge B
 - `GetBankBalance_IO_Spec.md`: 銀行帳戶餘額查詢 (Bank Balance Inquiry)。
 - `GetUnrealizedGainLossDetail_IO_Spec.md`: 未實現損益明細 (Unrealized Gain/Loss Detail).
 
-### 5. 自動交易策略與演算法 (Algo & Strategy)
-- `SendAlgoCOOdrStrategy.md`: 發送演算法策略指令 (Algorithm Strategy Command)。
-- `DeleteAlgoCOOdrStrategy.md`: 刪除演算法策略 (Delete Algorithm Strategy).
+### 5. 條件單 (Condition Order)
+- `SendAlgoCOOdrStrategy.md`: 發送條件單 (Send Condition Order)。
+- `DeleteAlgoCOOdrStrategy.md`: 刪除條件單 (Delete Condition Order).
+
+## 🚀 Quick Start for LLM (Claude / Codex / Cursor / Copilot)
+
+如果你是 AI 助手（Claude、Codex、Cursor、GitHub Copilot 等），請直接從以下主文件開始閱讀：
+
+👉 **[元大SparkAPI_IO規格_LLM.md](元大SparkAPI_IO規格_LLM.md)**
+
+此文件是整個 SparkAPI 的**總覽索引**，包含：
+- 所有 API 的清單與功能簡述
+- 各 API 之間的呼叫關係與使用情境
+- 快速定位到個別 API 的 IO 規格細節
+
+**建議載入方式：**
+1. 先載入 [`元大SparkAPI_IO規格_LLM.md`](元大SparkAPI_IO規格_LLM.md) 作為知識庫索引。
+2. 根據使用者的問題或指令，再按需載入對應的 `*_IO_Spec.md` 個別文件。
+
+---
 
 ## 如何使用此文件集 (For LLMs)
 
