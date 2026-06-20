@@ -72,3 +72,11 @@ Keywords: 元大證券, SparkAPI, OneAPI, 交易 API, IO 規格, LLM Knowledge B
 ## 注意事項
 - 本文件僅提供 **IO 規格說明**，不包含實際的 API Endpoint URL 或身份驗證 (Authentication) 機制。
 - 所有操作應遵循元大證券之相關交易規範與風險控管原則。
+
+> ⚠️ **Smoke Test 警告 | Smoke Test Warning**
+>
+> **進行 Smoke Test 時，請勿呼叫 `Login` API 登入元大 Spark API 正式環境。**
+> 若使用錯誤的帳號或密碼進行測試，連續登入失敗將導致帳號密碼被鎖定，影響正常交易。
+>
+> **When performing smoke tests, do NOT call the `Login` API against the Yuanta Spark API production environment.**
+> Repeated failed login attempts with incorrect credentials will result in account lockout and disrupt normal trading operations.
