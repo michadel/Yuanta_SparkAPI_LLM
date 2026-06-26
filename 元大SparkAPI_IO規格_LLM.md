@@ -173,6 +173,7 @@ api.GetWatchListAll(account, items)
 - `GetStkTickDetail` 實測每秒最多約 3 次；多商品回補請節流。
 - `GetKLine` 主要適用台股上市櫃 K 線；期貨 K 線需自行由 tick/報價聚合。
 - 非 Windows 登入加簽需要 native library：macOS `libYuantaCGCrypt.dylib`、Linux `libCGCGCrypt.so`。NuGet targets 檔名曾不會自動匯入，若登入回 `dwIndex=9` 或憑證檢核失敗，先檢查 native 檔是否複製到輸出目錄。
+- `Login` 呼叫頻率建議間隔 **5 秒以上**；短時間內重複呼叫登入可能造成伺服器端拒絕或帳號凍結風險，請勿在迴圈或重試邏輯中無節流地連續呼叫。
 - 等待連線不要比對完整字串；用關鍵字判斷，例如系統訊息同時包含「交易主機」與「Is Connected」。斷線可看 `Is Disconnected`，且先判斷斷線再判斷連線。
 - 訂閱與查詢錯誤可能以 `strIndex=""` 回傳一般字串，請保留原始訊息以便診斷。
 - 官方 IO 規格內有拼字沿用，例如 `Fileld`、`StickDetailResult`；寫程式要以 SDK 實際型別名稱為準。
